@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width-device-width, initial-scale=1.0" />
+
+		<meta name="description" content="free fire likes" />
+
+		<link rel="icon" href="website-logo.png" type="image/x-icon" />
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+		<title>Free fire</title>
+		<style>
+		   :root {
+		      --bg-light: #fff;
+		      --bg-dark: #0e0e11;
+		      --text-light: #000;
+		      --text-dark: #fff;
+		      --card-bg-light: rgba(255,255,255,0.92);
+		      --card-bg-dark: rgba(25,25,30,0.92);
+		      --card-border-light: #FFB900;
+		      --card-border-dark: #8A2BE2;
+		   }
+		   [data-theme="dark"] {
+       --bg: var(--bg-dark);
+       --text: var(--text-dark);
+       --card-bg: var(--card-bg-dark);
+       --card-border: var(--card-border-dark);
+      }
+      [data-theme="light"] {
+       --bg: var(--bg-light);
+       --text: var(--text-light);
+       --card-bg: var(--card-bg-light);
+       --card-border: var(--card-border-light);
+      }
+        body {
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+           font-family: 'Open Sans', sans-serif;
+           background: var(--bg);
+           color: var(--text);
+           transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .header-content {
+           background: #000;
+           color: #fff;
+           display: flex;
+           width: 100%;
+           padding: 0px 12px 0px 12px;
+           margin-bottom: 0px;
+           position: fixed;
+           top: 0;
+           z-index: 1000;
+           box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .head {
+           bacground: #fff;
+           flex: 1;
+        }
+        .header-content h1 {
+           color: #fff;
+           margin-bottom: 0;
+           font-family: monospace;
+        }
+        .edge {
+         position: absolute;
+         right: 2rem;
+         display: flex;
+        }
+        .theme-toggle {
+      postion: absolute;
+      margin-top: 2.5rem;
+      right: 2rem;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 1.5rem;
+      width: 50px;
+      height: 26px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 0 3px;
+      transition: background 0.3s ease;
+    }
+
+    .theme-toggle::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: white;
+      transition: transform 0.3s ease;
+    }
+
+    [data-theme="dark"] .theme-toggle::after {
+      transform: translateX(24px);
+    }
+    .underline {
+       background: var(--card-bg);
+       padding: 0px;
+       margin: 0px;
+       text-align: center;
+    }
+    .underline p {
+       padding: 0;
+       margin: 0;
+       color: #fff;
+    }
+    .first-txt {
+       padding: 77px 0px 0px 21px;
+       margin-bottom: 70px;
+       }
+    .first-txt p {
+       font-weight: 700;
+    }
+    .first-txt span {
+       color: #F500FF;
+    }
+    .ff-image {
+            position: relative;
+            perspective: 1000px;
+            margin-top: 3rem;
+            margin-left: 2rem;
+            margin-right: 3rem;
+        }
+        
+        .ff-image::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #FFB900 0%, #8A2BE2 100%);
+            border-radius: 20px;
+            transform: rotate(5deg);
+            z-index: -1;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        .ff-image:hover::before {
+            transform: rotate(3deg) scale(1.02);
+        }
+        
+        .ff-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transform-style: preserve-3d;
+        }
+        
+        .ff-image:hover img {
+            transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        .one-container {
+           background: var(--card-bg);
+          border-radius: 19px;
+          border: 1px solid var(--card-border);
+          padding: 2rem;
+          margin-top: 4rem;
+            margin-left: 2rem;
+            margin-right: 3rem;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            }
+            .one-container p {
+           font-weight: 400;
+           line-height: 190%
+           }
+           .one-container:hover {
+              transform: translateY(-3px);
+           }
+        .container {
+          border-radius: 19px;
+          border: 1px solid var(--card-border);
+          padding: 2rem;
+            margin-left: 2rem;
+            margin-right: 3rem;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .container:hover {
+           transform: translateY(-3px);
+        }
+        .container p {
+           font-weight: 400;
+           line-height: 190%
+        }
+        .header-text {
+           margin-left: 2.5rem;
+           margin-top: 5rem;
+        }
+        .socials a {
+          display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            width: 40px;
+            height: 40px;
+            background: #8A2BE2;
+            border-radius: 50%;
+            color: white;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        .socials a:hover {
+            background: #FFB900;
+            transform: translateY(-3px);
+            
+            }
+            .inp {
+        margin-left: 0.4rem;
+        margin-right: 0.4rem;
+        paddig: 0rem;
+        background-color: var(--bg);
+        border-radius: 6px;
+        border: 1px solid #8A2BE2;      
+        margin-bottom: 3rem;
+        display: flex;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        overflow: hidden;
+ }
+ 
+ .inp input {
+outline: none;
+overflow: hidden;
+border:none;
+justify-content: center;
+flex: 1;
+color: #000000;
+margin: 0;
+padding: 12px;
+            }
+            .input-container button {
+               outline: none;
+overflow: hidden;
+background: linear-gradient(135deg, #FFB900 0%, #8A2BE2 100%);
+border:none;
+justify-content: center;
+flex: 1;
+color: #fff;
+margin: 0;
+            }
+            
+    /* Button styling */
+    .open-btn {
+      padding: 10px 20px;
+      background: #62006a;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* Dialog backdrop */
+    .dialog {
+      display: none; /* hidden by default */
+      position: fixed;
+      z-index: 1000;
+      height: 100%;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      animation:fadeIn 0.3s ease;
+    }
+        /* Dialog box */
+    .dialog-content {
+      background: var(--card-bg);
+      color: var(--text);
+      border: 1px solid var(--card-border);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: fadeIn 0.3s ease;
+      }
+      
+    .close-btn {
+      margin-top: 15px;
+      padding: 8px 16px;
+      background: #ff4fb2;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    
+    table {
+       background: ;
+       margin-left: 20px;
+       margin-right: 20px;
+       text-align: center;
+       border: none;
+       outline: none;
+      }         
+          
+          
+          
+          
+          
+          
+  
+  
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="header-content">
+				<div class="head">
+					<h1>Free-fire likes</h1>
+					<p>999+ verified</p>
+				</div>
+				<!--edge layout-->
+				<div class="edge">
+					<button class="theme-toggle" aria-label="Toggle dark/light mode"></button>
+				</div>
+			</div>
+		</header>
+		<div class="underline">
+			<p>A D V E R T I S E M E N T</p>
+		</div>
+		<div class="first-txt">
+			<p>Claim 300 free likes via your UID for free Daily</p>
+			<p>By
+				<span>RITE</span>
+				- september 1st, 2025 in
+
+				<span>TOOLS</span>
+			</p>
+			<div class="socials" style="display: flex">
+				<a href="#">
+					<i class="fab fa-facebook"></i>
+				</a>
+				<a href="#">
+					<i class="fab fa-twitter"></i>
+				</a>
+				<a href="#">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="#">
+					<i class="fab fa-linkedin"></i>
+				</a>
+				<a href="#">
+					<i class="fab fa-discord"></i>
+				</a>
+			</div>
+			<div class="ff-image">
+				<img src=" https://freefireinfo.in/wp-content/uploads/2024/12/Claim-100-Likes-Via-UID-For-Free-1024x576.jpg ?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="free fire profile" />
+
+			</div>
+			<div class="one-container">
+				<p>
+					In Game, likes show how cool and skilled a player is. If a player has a lot of likes, it means others recognize their skills and gameplay. More likes also make a profile look popular and respected. Getting likes helps players stand out and feel proud of their gaming achievements.
+					Previously, players could earn likes in Game through craftland maps. However, all official methods have now been closed.
+					That's why I created this tool to provide free likes, just as players wanted. No hacks or apps are needed—just enter the player's UID!
+
+				</p>
+			</div>
+			<h2 class="header-text">Steps to Get Free Likes:</h2>
+			<div class="container">
+				<p>
+					➤ Enter your Free Fire UID in the input box.</br>
+					➤ Please verify that you are human by clicking the Cloudflare Turnstile checkbox.</br>
+					➤ Click the "Claim Free Likes" button.</br>
+					➤ The system will automatically detect your region and send likes to your UID.</br>
+					➤ Check the status update in the popup.</br>
+					The likes system operates on a first-come, first-served basis. Only early users at the start of the day can claim likes.
+
+				</p>
+			</div>
+			<h2 class="header-text">Rules:</h2>
+			<div class="container">
+			   <p>
+				1. A UID can receive a maximum of 100 likes within 24 hours.</br>
+				2. Once likes are claimed from this tool, no additional likes can be received from the game or this tool until the 24-hour cooldown resets.</br>
+				3. Even if teammates or profile visitors try to send likes in the game, they will not be added to the account due to game restrictions.</br>
+				This tool offers a simple, safe, and efficient way to gain free likes for your Game account. It complies with all game rules, ensuring no risk of bans. Start using it today and make your profile look more popular!
+				</p>
+
+			</div>
+			<h2 class="header-text">Enter UID:</h2>
+			<div class="input-container">
+				<form>
+					<div class="inp">
+						<input type="number" placeholder="UID" />
+
+						<button class="Submit" onclick="openDialog()">CLAIM FREE LIKES</button>
+					</div>
+				</form>
+			</div>
+			 			<!-- Dialog -->
+			<div class="dialog" id="myDialog">
+				<div class="dialog-content">
+					<h2>200 likes succesful</h2>
+					<p>Your likes will Reflect in the designated UID in the next 24 hours</p>
+					<button class="close-btn" onclick="closeDialog()">Close</button>
+					</div>
+					</div>
+			<table border="2">
+				<tbody>
+					<tr>
+						<th width="150"></th>
+						<th width="100%">Name</th>
+						<th width="150" bgcolor="#cccccc">Likes</th>
+					</tr>
+					<tr>
+						<th> 10307254224 </th>
+						<td> ⚔︎.hacrrrr⚔︎ </td>
+						<td>199</td>
+					</tr>
+					<tr>
+						<th> 8830585050</th>
+						<td> Highbee09 </td>
+						<td bgcolor="#cccccc">100</td>
+					</tr>
+					<tr>
+						<th> 1815106792 </th>
+						<td> xᴅㅤㅤSᴀɴᴛᴏsʜ✔ </td>
+						<td>130</td>
+					</tr>
+					<tr>
+					 	<th> 3232553490</th>
+						<td> Quyếttẻntẻn© </td>
+						<td bgcolor="#cccccc">170</td>
+						</tr>
+						<tr>
+						   	<th> 8077630613 </th>
+						<td> FCS-RONAK </td>
+						<td>98</td>
+						</tr>
+						<tr>
+						   	<th> 8077630613 </th>
+						<td> ᴰᴮㅤRʏzᴇɴɴㅤ愛 </td>
+						<td bgcolor="#cccccc">110</td>
+						</tr>
+						<tr>
+						   
+				</tbody>
+			</table>
+    <script>
+     const dialog = document.getElementById("myDialog");
+
+    function openDialog() {
+      dialog.style.display = "flex";
+    }
+
+    function closeDialog() {
+      dialog.style.display = "none";
+    }
+
+    // Close dialog when clicking outside the box
+    window.addEventListener("click", function(event) {
+      if (event.target === dialog) {
+        closeDialog();
+      }
+    });
+  // Theme Toggle Functionality
+    const themeToggle = document.querySelector('.theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Check for saved theme or prefered scheme
+    const currentTheme = localStorage.getItem('theme') || 
+                         (prefersDarkScheme.matches ? 'dark' : 'light');
+    
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+     
+					</script>
+	</body>
+</html>
